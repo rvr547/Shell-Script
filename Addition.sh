@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Enter A"
 read A
+echo "Enter A"
 read B
 C=$((A+B))
 
