@@ -14,9 +14,9 @@ USERID=$(id -u)
 VALIDATE(){
 if [ $1 -ne 0 ]
 then 
-    echo "$2  ........$R Failure $N"
+    echo -e "$2  ........$R Failure $N"
 else
-    echo "$2  ......$G Successful $N"
+    echo  -e "$2  ......$G Successful $N"
 fi
 }
 
