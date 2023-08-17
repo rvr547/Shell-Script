@@ -1,6 +1,9 @@
 #!/bin/bash
 DATE=$(date +%F-%H-%M)
-Validate()
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+VALIDATE()
 {
   if [ $1 -ne 0 ]
 then 
@@ -13,5 +16,5 @@ fi
 for i in $@
 do
     yum install $i -y &>>/tmp/$i-$DATE.log
-    validate $? "$i installation"
+    VALIDATE $? "$i installation"
 done
