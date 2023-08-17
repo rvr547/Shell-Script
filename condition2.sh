@@ -16,5 +16,5 @@ then
     echo "Installation of mysql is not complete"
 else
     echo "Installation Successful"
-if
+fi
 
