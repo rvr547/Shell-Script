@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "Enter A"
 A=$1
-echo "Enter B"
 B=$2
+C=$(A+B)
 
-echo "Addition of A and B is ($A+$B)"
+echo "Addition of A and B is $(A+B), $C"
