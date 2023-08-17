@@ -2,15 +2,18 @@
 
 #!/bin/bash
 
+DATE=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 
 
 VALIDATE(){
 if [ $1 -ne 0 ]
 then 
-    echo "$2 Installation ........Failure"
+    echo "$2  ........Failure"
 else
-    echo "$2 Installation ......Successful"
+    echo "$2  ......Successful"
 fi
 }
 
@@ -23,12 +26,12 @@ fi
 
 yum install mysql -y
 
-VALIDATE $? "Installing My SQL"
+VALIDATE $? "Installing My SQL" &>>$LOGFILE
 
 
 yum install postfix -y
 
-VALIDATE $? "Installing Post fix"
+VALIDATE $? "Installing Post fix" &>>$LOGFILE
 
 
 
