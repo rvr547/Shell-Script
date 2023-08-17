@@ -18,3 +18,14 @@ else
     echo "Installation Successful"
 fi
 
+yum install postfix -y
+
+if [ $? -ne 0 ]
+then 
+    echo "Installation of postfix is not complete"
+else
+    echo "Installation Successful"
+fi
+
+
+
