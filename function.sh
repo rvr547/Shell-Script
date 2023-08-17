@@ -27,7 +27,7 @@ then
 fi
 
 
-yum install mysql -y &>>$LOGFILE
+yum install mysqll -y &>>$LOGFILE
 
 VALIDATE $? "Installing My SQL" 
 
