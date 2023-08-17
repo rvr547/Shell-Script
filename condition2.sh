@@ -9,4 +9,12 @@ then
 fi
 
 
-yum install git -y
+yum install mysqll -y
+
+if [ $? -ne 0 ]
+then 
+    echo "Installation of mysql is not complete"
+else
+    echo "Installation Successful"
+if
+
