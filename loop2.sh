@@ -1,5 +1,5 @@
 #!/bin/bash
-DATE=$(Date +%F-%H-%M)
+DATE=$(date +%F-%H-%M)
 
 for i in $@
 do
