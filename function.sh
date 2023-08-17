@@ -24,14 +24,14 @@ then
 fi
 
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
-VALIDATE $? "Installing My SQL" &>>$LOGFILE
+VALIDATE $? "Installing My SQL" 
 
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
-VALIDATE $? "Installing Post fix" &>>$LOGFILE
+VALIDATE $? "Installing Post fix" 
 
 
 
