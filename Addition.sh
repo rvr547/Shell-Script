@@ -1,7 +1,7 @@
 #!/bin/bash
-
-A=$1
-B=$2
+echo "Enter A"
+read A
+read B
 C=$((A+B))
 
 echo "Addition of A and B is , $C"
