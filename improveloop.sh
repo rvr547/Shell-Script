@@ -26,7 +26,7 @@ fi
 
 for i in $@
 do
-    yum installed $i
+    yum list installed $i &>>$LOGFILE
     if [$? -ne 0]
     then
         echo "$i not installed lets install it"
