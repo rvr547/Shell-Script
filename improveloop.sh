@@ -5,7 +5,7 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 LOGDIR=/home/centos/shellscript-log
-LOGFILE=$0-$DATE.log
+LOGFILE=$LOGDIR/$0-$DATE.log
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
