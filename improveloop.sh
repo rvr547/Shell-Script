@@ -10,7 +10,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR: Root access required to install the package $N"
-    exiit 1
+    exit 1
 fi
 
 VALIDATE()
@@ -34,5 +34,5 @@ do
         VALIDATE $? "$i installation"
     else
         echo -e "$Y $i already installed $N"
-    if
+    fi
 done
