@@ -14,7 +14,6 @@ echo "$FILES_TO_DELETE"
 
 while read line
 do
-  touch $LOGSDIR/$0-$DATE.log
   echo "Deleting $line" &>>$LOGFILE
   rm -rf $line
 done <<< $FILES_TO_DELETE
