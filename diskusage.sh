@@ -22,4 +22,6 @@ done <<<$DUSAGE
 
 echo -e "$Message"
 
-echo -e "$Message" | mail -s "Disk Usage Alert" rivare.rvr@gmail.com
+#echo -e "$Message" | mail -s "Disk Usage Alert" rivare.rvr@gmail.com
+
+sh mail.sh rivare.rvr@gamil.com "Disk Usage Alert" "$Message" "DevOps Team" "High Disk Usage"
