@@ -24,4 +24,4 @@ echo -e "$Message"
 
 #echo -e "$Message" | mail -s "Disk Usage Alert" rivare.rvr@gmail.com
 
-sh mail.sh "rivare.rvr@gamilgmail.com" "Disk Usage Alert" "$Message" "DevOps Team" "High Disk Usage"
+sh mail.sh "rivare.rvr@gmail.com" "Disk Usage Alert" "$Message" "DevOps Team" "High Disk Usage"
