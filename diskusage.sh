@@ -6,9 +6,18 @@ G="\e[32m"
 N="\e[0m"
 DUSAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
 DUSAG_ETHRESHOLD=1
+Message=
 
 #IFS means internal field saparator
 while IFS= read line
 do
-    echo "$line"
+    #to get usage in number df -hT | grep -vE 'tmpfs|Filesystem' | awk {'print $6'} | cut -d % -f1
+    usage=$(echo $line | awk {'print $6'} | cut -d % -f1)
+    partiction= $(echo $line |awk {'print $1'} )
+    if [ $usage -gt $DUSAG_ETHRESHOLD ]
+    then
+        Message+= " High Disk usage on $partition : $usage"
+    fi
 done <<<$DUSAGE
+
+echo $Message
