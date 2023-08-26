@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_LOGS_DIR=/home/centos/app-logs/shellscript-log
+APP_LOGS_DIR=/home/centos/app-logs
 
 DATE=$(date +%F:%H:%M:%S)
 LOGSDIR=/home/centos/shellscript-log
@@ -15,5 +15,5 @@ echo "$FILES_TO_DELETE"
 while read line
 do
   echo "Deleting $line" &>>$LOGFILE
-   rm -rf $line
+   #rm -rf $line
 done <<< $FILES_TO_DELETE
