@@ -16,8 +16,8 @@ do
     partition=$(echo $line | awk {'print $1'} )
     if [ $usage -gt $DUSAG_ETHRESHOLD ]
     then
-        Message+="High Disk usage on $partition : $usage"
+        Message+="High Disk usage on $partition : $usage \n "
     fi
 done <<<$DUSAGE
 
-echo $Message
+echo -e "$Message"
