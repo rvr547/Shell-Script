@@ -13,7 +13,7 @@ while IFS= read line
 do
     #to get usage in number df -hT | grep -vE 'tmpfs|Filesystem' | awk {'print $6'} | cut -d % -f1
     usage=$(echo $line | awk {'print $6'} | cut -d % -f1)
-    partiction= $(echo $line |awk {'print $1'} )
+    partiction= $(echo $line | awk {'print $1'} )
     if [ $usage -gt $DUSAG_ETHRESHOLD ]
     then
         Message+= " High Disk usage on $partition : $usage"
