@@ -21,3 +21,5 @@ do
 done <<<$DUSAGE
 
 echo -e "$Message"
+
+echo -e "$Message" | mail -s "Disk Usage Alert" rivare.rvr@gmail.com
