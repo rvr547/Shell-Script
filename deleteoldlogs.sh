@@ -5,7 +5,7 @@ DATE=$(date +%F:%H:%M:%S)
 LOGSDIR=/home/centos/shellscript-log
 # /home/centos/shellscript-logs/script-name-date.log
 
-LOGFILE=$0-$DATE.log
+LOGFILE=$LOGSDIR/$DATE.log
 
 FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
 
