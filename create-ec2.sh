@@ -7,3 +7,4 @@ for i in "${NAMES[@]}"
 do
   echo "NAME: $i"
 done
+echo "NAME: $i"
