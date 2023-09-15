@@ -3,8 +3,9 @@
 NAME=("cart" "user" "payment" "mongodb" "mysql")
 
 #for mysql and mongo DB istance type should be t3.micro
-for i in "${NAMES[@]}"
+
+for i in "${NAME[@]}"
 do
   echo "NAME: $i"
 done
-echo "NAME: $i"
+#echo "NAME: $i"
