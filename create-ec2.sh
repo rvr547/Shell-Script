@@ -8,13 +8,13 @@ SEC_GROUP_ID=sg-0f096ed6f8ae3d1a9
 
 for i in "${NAME[@]}"
 do
-  #echo "NAME: $i"
+  
   if [ [ $i == "mongodb" || $i == "mysql" ] ]
   then
     INSTANCE_TYPE="t3.micro"
   else
     INSTANCE_TYPE="t2.micro"
-  if
+  fi
   echo "Creating instance $i "
   aws ec2 run-instances --image-id $IMGID  --instance-type $INSTANCE_TYPE --security-group-ids $SEC_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"
 
