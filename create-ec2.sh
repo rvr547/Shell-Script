@@ -9,7 +9,7 @@ SEC_GROUP_ID=sg-0f096ed6f8ae3d1a9
 for i in "${NAME[@]}"
 do
   
-  if [  $i == "mongodb" || $i == "mysql"  ]
+  if [ $i == "mongodb" || $i == "mysql" ]
   then
     INSTANCE_TYPE="t3.micro"
   else
