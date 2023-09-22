@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=("cart" "user" "payment" "mongodb" "mysql")
+NAME=("cart" "user" "catalogue" "payment" "mongodb" "mysql" "rabbitmq" "shipping" "redis" "web" "dispatch")
 
 #for mysql and mongo DB istance type should be t3.micro
 
