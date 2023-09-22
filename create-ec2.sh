@@ -17,5 +17,5 @@ do
   if
   echo "Creating instance $i "
   aws ec2 run-instances --image-id $IMGID  --instance-type $INSTANCE_TYPE --security-group-ids $SEC_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"
+
 done
-#echo "NAME: $i"cd  
